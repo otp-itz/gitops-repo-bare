@@ -10,7 +10,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://github.com/otp-itz/otp-gitops
+      value: $TARGET_REPO
     - op: add
       path: /spec/source/targetRevision
       value: master
@@ -20,7 +20,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${HELM_REPOURL}
+      value: https://charts.cloudnativetoolkit.dev
 - target:
     group: argoproj.io
     kind: AppProject
@@ -28,7 +28,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: https://github.com/otp-itz/otp-gitops
+      value: $TARGET_REPO
     - op: add
       path: /spec/sourceRepos/-
       value: https://github.com/otp-itz/otp-gitops-infra.git
@@ -39,7 +39,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: https://github.com/otp-itz/otp-gitops
+      value: $TARGET_REPO
     - op: add
       path: /spec/sourceRepos/-
       value: https://github.com/otp-itz/otp-gitops-services.git
@@ -50,7 +50,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: https://github.com/otp-itz/otp-gitops
+      value: $TARGET_REPO
     - op: add
       path: /spec/sourceRepos/-
       value: https://github.com/otp-itz/otp-gitops-applications.git
